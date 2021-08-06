@@ -57,3 +57,8 @@ video::-webkit-media-controls-panel {
     height: 60vh;
   }
 }
+@media (max-height: 600px) {
+  .definition-container {
+    height: 35vh;
+  }
+}
