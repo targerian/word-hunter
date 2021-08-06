@@ -24,10 +24,11 @@
 .select {
   width: 40%;
 }
-@media (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .header {
     height: 25vh;
-    margin-top: 45px;
+    margin-top: 20px;
+    background-color: red;
   }
   .title {
     font-size: 11vw;
