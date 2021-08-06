@@ -1,6 +1,6 @@
 import axios from "axios";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Container, withStyles, Switch } from "@material-ui/core";
 import Header from "./components/header/Header";
 import Definitions from "./components/definitions/Definitions";
@@ -82,7 +82,7 @@ function App() {
     track: {},
   })(Switch);
 
-  const dictionaryApi = async () => {
+  const dictionaryApi = useCallback(async () => {
     try {
       const data = await axios.get(
         `https://api.dictionaryapi.dev/api/v2/entries/${language}/${word}`
@@ -91,11 +91,11 @@ function App() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [word, language]);
   console.log(meanings);
   useEffect(() => {
     dictionaryApi();
-  }, [word, language]);
+  }, [word, language, dictionaryApi]);
   return (
     <div
       className="app"
