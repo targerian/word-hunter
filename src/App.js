@@ -66,7 +66,7 @@ function App() {
   const [language, setLanguge] = useState("en_US");
   const [meanings, setMeanings] = useState([]);
   const [word, setWord] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const ThemeSwitch = withStyles({
     switchBase: {
