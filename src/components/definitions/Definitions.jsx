@@ -25,7 +25,6 @@ function Definitions({ word, meanings, language, darkMode }) {
         meanings.map((mean) =>
           mean.meanings.map((meanaya) =>
             meanaya.definitions.map((definition) => {
-              console.log(definition);
               return (
                 <div
                   className="single-mean"
